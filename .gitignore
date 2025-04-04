@@ -1,0 +1,25 @@
+# Ignore environment variables
+.env
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore logs
+logs/
+*.log
+
+# Ignore virtual environment
+venv/
+.env/
+
+# Ignore IDE and system files
+.vscode/
+*.swp
+.DS_Store
+*.bak
+
+# Ignore unnecessary node_modules if using frontend
+node_modules/
+package-lock.json
