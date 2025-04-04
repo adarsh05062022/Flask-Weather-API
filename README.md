@@ -116,5 +116,4 @@ MIT License. Feel free to use and modify.
 ## 👨‍💻 Author
 
 **Adarsh Dubey**  
-📧 [adarshdubey0002@gmail.com](mailto:adarshdubey0002@gmail.com)  
 🌐 [adarsh-dubey.netlify.app](https://adarsh-dubey.netlify.app)
