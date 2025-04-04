@@ -1,118 +1,120 @@
-Weather API - Flask Application 🌦️
-Overview
-This is a Flask API that provides weather information based on location or latitude/longitude coordinates. The weather data is fetched using the OpenWeatherMap API.
 
-🚀 Developed by: Adarsh Dubey
+# 🌦️ Flask Weather API by Adarsh Dubey
 
-Features
-✅ Fetch weather data by city name.
-✅ Fetch weather data using latitude and longitude.
-✅ Provides temperature, humidity, pressure, wind speed, and more.
-✅ Uses .env for API key security.
+A lightweight Flask REST API that provides real-time weather data using OpenWeatherMap and OpenStreetMap (Nominatim). This project allows you to retrieve current weather information by either location name or geographic coordinates.
 
-Setup and Installation
-1️⃣ Clone the Repository
-sh
-Copy
-Edit
-git clone https://github.com/yourusername/weather-api.git
-cd weather-api
-2️⃣ Create a Virtual Environment (Optional)
-sh
-Copy
-Edit
+---
+
+## 🌐 Live Preview
+
+➡️ Visit: [adarsh-dubey.netlify.app](https://adarsh-dubey.netlify.app)  
+For more APIs and projects by Adarsh Dubey.
+
+---
+
+## ✨ Features
+
+- 🔍 Get weather by location name
+- 📍 Get weather by latitude & longitude
+- 🛰️ Uses OpenStreetMap Nominatim for geocoding
+- ☁️ Real-time weather data from OpenWeatherMap
+- 🌡️ Includes temperature, humidity, wind, clouds, rain/snow, visibility, and more
+- 🔐 API key secured using dotenv
+- ⚙️ Built with Flask
+
+---
+
+## 🧰 Tech Stack
+
+- Python 3.x  
+- Flask  
+- Requests  
+- python-dotenv  
+- OpenWeatherMap API  
+- OpenStreetMap Nominatim API  
+
+---
+
+## 📥 Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/weather-flask-api.git
+cd weather-flask-api
+```
+
+### 2. Create Virtual Environment (Optional)
+
+```bash
 python -m venv venv
-source venv/bin/activate  # On macOS/Linux
-venv\Scripts\activate  # On Windows
-3️⃣ Install Dependencies
-sh
-Copy
-Edit
+source venv/bin/activate        # On Windows: venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-4️⃣ Create a .env File for API Key
-Create a .env file in the project root and add:
+```
 
-ini
-Copy
-Edit
-WEATHER_API_KEY=your_openweathermap_api_key
-Replace your_openweathermap_api_key with your actual API key from OpenWeatherMap.
+### 4. Add Environment Variables
 
-Running the Flask App
-sh
-Copy
-Edit
+Create a `.env` file in the root directory and add your OpenWeatherMap API key:
+
+```
+WEATHER_API_KEY=your_api_key_here
+```
+
+### 5. Run the Flask App
+
+```bash
 python app.py
-The API will start at http://127.0.0.1:5000/
+```
 
-API Endpoints
-🌍 1. Get Weather by Location Name
-Endpoint:
+Runs on: `http://127.0.0.1:5000/`
 
-pgsql
-Copy
-Edit
+---
+
+## 📡 API Endpoints
+
+### 🔹 Home Route
+
+```http
+GET /
+```
+
+Returns a welcome message.
+
+---
+
+### 🔹 Get Weather by Location
+
+```http
 GET /get_data_by_location/<location>
-📌 Example:
+```
 
-sh
-Copy
-Edit
-http://127.0.0.1:5000/get_data_by_location/Delhi
-📌 Response:
+Fetches weather data using the city/location name.
 
-json
-Copy
-Edit
-{
-    "latitude": "28.6274",
-    "longitude": "77.1717",
-    "location": "Connaught Place",
-    "country": "IN",
-    "temperature": 31.0,
-    "feels_like": 30.5,
-    "humidity": 50,
-    "pressure": 1012,
-    "weather": "clear sky",
-    "wind_speed": 2.5,
-    "sunrise": 1743727073,
-    "sunset": 1743772224
-}
-📍 2. Get Weather by Latitude & Longitude
-Endpoint:
+---
 
-php-template
-Copy
-Edit
+### 🔹 Get Weather by Coordinates
+
+```http
 GET /get_data_by_cordinate/<lat>/<lon>
-📌 Example:
+```
 
-sh
-Copy
-Edit
-http://127.0.0.1:5000/get_data_by_cordinate/28.6274/77.1717
-📌 Response: (Same as above)
+Fetches weather data using latitude and longitude.
 
-Tech Stack
-Python 🐍
+---
 
-Flask 🔥
+## 📄 License
 
-Requests 🌐
+MIT License. Feel free to use and modify.
 
-OpenWeatherMap API ☁️
+---
 
-🛠️ Future Improvements
-📌 Add hourly & weekly weather forecast
+## 👨‍💻 Author
 
-📌 Include air quality index (AQI)
-
-📌 Improve error handling & logging
-
-💡 Contributing
-Feel free to contribute to this project by submitting a pull request! 🚀
-
-📜 License
-This project is open-source and available under the MIT License.
-
-🚀 For more projects & APIs, visit: adarsh-dubey.netlify.app 🎯
+**Adarsh Dubey**  
+📧 [adarshdubey0002@gmail.com](mailto:adarshdubey0002@gmail.com)  
+🌐 [adarsh-dubey.netlify.app](https://adarsh-dubey.netlify.app)
